@@ -4,5 +4,5 @@ if [ ! -f /home/gerrit2/review_site/hooks/error_log ]; then
 fi
 echo "$(date)" >> /home/gerrit2/review_site/hooks/error_log
 echo "$@" >> /home/gerrit2/review_site/hooks/error_log
-VAR="$(/usr/bin/python /home/gerrit2/review_site/hooks/webhook-process-hook --action new "$@" 2>&1)"
+VAR="$(/usr/bin/python /home/gerrit2/review_site/hooks/webhook-process-hook --action comment "$@" 2>&1)"
 echo ${VAR} >> /home/gerrit2/review_site/hooks/error_log
